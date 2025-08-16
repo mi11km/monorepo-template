@@ -2,7 +2,9 @@ version: "2"
 linters:
   default: all
   disable:
-    - wsl
+    - depguard # 依存の設定をそこまで細かくしたくないため
+    - exhaustruct # 構造体のフィールドが初期化されているかをチェックするが、空の構造体も許可するため
+    - wsl # deprecated
 formatters:
   enable:
     - gci
