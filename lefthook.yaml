@@ -11,14 +11,6 @@ pre-commit:
       glob: "*.{html,yml,yaml,md,json5}"
       run: bunx prettier --write --ignore-path typescript/.prettierignore --ignore-unknown {staged_files}
       stage_fixed: true
-    golangci-lint:
-      glob: "*.go"
-      run: golangci-lint run -v -c go/.golangci.yaml {staged_files}
-      stage_fixed: true
-    gofmt:
-      glob: "*.go"
-      run: golangci-lint fmt {staged_files}
-      stage_fixed: true
 commit-msg:
   commands:
     # Validate commit messages

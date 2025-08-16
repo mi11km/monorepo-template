@@ -15,6 +15,10 @@ initialize-once:
 	bun i
 
 ### Development Commands
+.PHONY: install
+install:
+	bunx nx affected -t install
+
 .PHONY: build
 build:
 	bunx nx affected -t build
