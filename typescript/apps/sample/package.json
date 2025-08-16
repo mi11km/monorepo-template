@@ -8,8 +8,6 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "fmt": "biome format --write",
-    "lint": "biome lint --write",
     "typecheck": "react-router typegen && tsc --noEmit"
   },
   "dependencies": {

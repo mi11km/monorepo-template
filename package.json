@@ -1,7 +1,7 @@
 {
   "name": "monorepo-template",
   "version": "0.0.1",
-  "description": "A standard server",
+  "description": "A monorepo template for TypeScript and Golang projects",
   "private": true,
   "workspaces": {
     "packages": [

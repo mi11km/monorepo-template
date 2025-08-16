@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "fmt": "biome format --write",
-    "lint": "biome lint --write",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
