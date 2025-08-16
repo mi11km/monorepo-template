@@ -4,6 +4,7 @@ linters:
   disable:
     - depguard # 依存の設定をそこまで細かくしたくないため
     - exhaustruct # 構造体のフィールドが初期化されているかをチェックするが、空の構造体も許可するため
+    - testpackage # テストパッケージのチェックを無効化
     - wsl # deprecated
 formatters:
   enable:
