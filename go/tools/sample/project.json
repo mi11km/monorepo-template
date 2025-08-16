@@ -1,0 +1,38 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "go/tools/sample",
+  "projectType": "library",
+  "root": "go/tools/sample",
+  "targets": {
+    "build": {
+      "command": "go build -o build/sample-tool ./cmd/main.go",
+      "options": {
+        "cwd": "go/tools/sample"
+      }
+    },
+    "dev": {
+      "command": "go run cmd/main.go",
+      "options": {
+        "cwd": "go/tools/sample"
+      }
+    },
+    "fmt": {
+      "command": "make fmt-go",
+      "options": {
+        "cwd": "go/tools/sample"
+      }
+    },
+    "lint": {
+      "command": "make lint-go",
+      "options": {
+        "cwd": "go/tools/sample"
+      }
+    },
+    "test": {
+      "command": "make test-go",
+      "options": {
+        "cwd": "go/tools/sample"
+      }
+    }
+  }
+}

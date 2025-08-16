@@ -1,0 +1,9 @@
+# Biome で未サポートの言語は補助的に Prettier を利用する
+# https://biomejs.dev/internals/language-support/
+**/*
+!**/
+!*.html
+!*.yml
+!*.yaml
+!*.md
+!*.json5

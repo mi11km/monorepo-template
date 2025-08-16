@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package rpc.sample.v1;
+
+import "buf/validate/validate.proto";
+import "google/api/annotations.proto";
+
+option go_package = "github.com/mi11km/monorepo-template/go/apps/sample/infrastructure/rpc/v1";
+
+// サービスの動作状況を確認するためのサービス
+service HealthService {
+  // サービスの動作状況を確認
+  rpc Check(CheckRequest) returns (CheckResponse) {
+    option (google.api.http) = {
+      post: "/rpc.sample.v1.HealthService/Check"
+      body: "*"
+    };
+  }
+  // サービスの動作状況を監視
+  rpc Watch(WatchRequest) returns (stream WatchResponse) {
+    option (google.api.http) = {
+      post: "/rpc.sample.v1.HealthService/Watch"
+      body: "*"
+    };
+  }
+}
+
+// 提供ステータス
+enum ServingStatus {
+  // 不明
+  SERVING_STATUS_UNSPECIFIED = 0;
+  // 提供できる
+  SERVING_STATUS_OK = 1;
+  // まだ提供できない
+  SERVING_STATUS_NOT_YET = 2;
+  // 存在しない
+  SERVING_STATUS_UNKNOWN = 3;
+  // サービスが停止中
+  SERVING_STATUS_STOPPED = 4;
+}
+
+message CheckRequest {
+  // サービス名 (ex. HealthService)
+  Service service = 1;
+}
+
+message CheckResponse {
+  // 提供ステータス
+  ServingStatus status = 1 [(buf.validate.field).enum.defined_only = true];
+}
+
+message WatchRequest {
+  // サービス名 (ex. HealthService)
+  Service service = 1;
+}
+
+message WatchResponse {
+  // 提供ステータス
+  ServingStatus status = 1 [(buf.validate.field).enum.defined_only = true];
+}
+
+message Service {
+  string name = 1 [
+    (buf.validate.field).string.prefix = "sample.v1",
+    (buf.validate.field).string.suffix = "Service"
+  ];
+}

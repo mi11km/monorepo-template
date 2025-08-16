@@ -1,0 +1,38 @@
+{
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "name": "proto",
+  "projectType": "library",
+  "root": "proto",
+  "targets": {
+    "build": {
+      "command": "buf dep update && buf build .",
+      "options": {
+        "cwd": "proto"
+      }
+    },
+    "fmt": {
+      "command": "buf format -w .",
+      "options": {
+        "cwd": "proto"
+      }
+    },
+    "lint": {
+      "command": "buf lint .",
+      "options": {
+        "cwd": "proto"
+      }
+    },
+    "check": {
+      "command": "buf breaking --against 'https://github.com/mi11km/monorepo-template.git#branch=main,subdir=proto' --error-format=json . | jq .",
+      "options": {
+        "cwd": "proto"
+      }
+    },
+    "generate": {
+      "command": "buf generate --template schema/rpc/buf.gen.yaml --path schema/rpc",
+      "options": {
+        "cwd": "proto"
+      }
+    }
+  }
+}

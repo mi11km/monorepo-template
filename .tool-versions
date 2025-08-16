@@ -1,0 +1,6 @@
+go            1.25.0
+bun           1.2.20
+buf           1.56.0
+golangci-lint 2.4.0
+mockery       3.5.2
+jq            1.8.1

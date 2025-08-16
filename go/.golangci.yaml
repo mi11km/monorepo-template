@@ -1,0 +1,16 @@
+version: "2"
+linters:
+  default: all
+  disable:
+    - wsl
+formatters:
+  enable:
+    - gci
+    - gofmt
+    - gofumpt
+    - goimports
+    - golines
+    - swaggo
+run:
+  timeout: 5m
+  allow-parallel-runners: true

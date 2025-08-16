@@ -1,0 +1,10 @@
+version: v2
+plugins:
+  - remote: buf.build/protocolbuffers/go:v1.36.7
+    out: ..
+    opt: module=github.com/mi11km/monorepo-template
+  - remote: buf.build/connectrpc/go:v1.18.1
+    out: ..
+    opt: module=github.com/mi11km/monorepo-template
+inputs:
+  - directory: schema

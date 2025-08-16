@@ -1,0 +1,38 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "go/apps/sample",
+  "projectType": "application",
+  "root": "go/apps/sample",
+  "targets": {
+    "build": {
+      "command": "go build -o build/sample-app ./cmd/main.go",
+      "options": {
+        "cwd": "go/apps/sample"
+      }
+    },
+    "dev": {
+      "command": "go run cmd/main.go",
+      "options": {
+        "cwd": "go/apps/sample"
+      }
+    },
+    "fmt": {
+      "command": "make fmt-go",
+      "options": {
+        "cwd": "go/apps/sample"
+      }
+    },
+    "lint": {
+      "command": "make lint-go",
+      "options": {
+        "cwd": "go/apps/sample"
+      }
+    },
+    "test": {
+      "command": "make test-go",
+      "options": {
+        "cwd": "go/apps/sample"
+      }
+    }
+  }
+}

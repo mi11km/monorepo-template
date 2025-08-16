@@ -1,0 +1,19 @@
+pre-commit:
+  parallel: true
+  commands:
+    biome:
+      glob: "*.{js,cjs,mjs,ts,jsx,tsx,json,jsonc,css}"
+      run: bunx biome check format --write {staged_files}
+      stage_fixed: true
+    # Biome で未サポートの言語は補助的に Prettier を利用する
+    # https://biomejs.dev/internals/language-support/
+    prettier:
+      glob: "*.{html,yml,yaml,md,json5}"
+      run: bunx prettier --write --ignore-unknown {staged_files}
+      stage_fixed: true
+commit-msg:
+  commands:
+    # Validate commit messages
+    # https://evilmartians.github.io/lefthook/examples/commitlint.html
+    commitlint:
+      run: bunx commitlint --edit {1}
