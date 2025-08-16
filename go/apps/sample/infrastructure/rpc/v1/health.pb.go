@@ -331,7 +331,7 @@ const file_rpc_sample_v1_health_proto_rawDesc = "" +
 	"\x16SERVING_STATUS_STOPPED\x10\x042\xf7\x01\n" +
 	"\rHealthService\x12q\n" +
 	"\x05Check\x12\x1b.rpc.sample.v1.CheckRequest\x1a\x1c.rpc.sample.v1.CheckResponse\"-\x82\xd3\xe4\x93\x02':\x01*\"\"/rpc.sample.v1.HealthService/Check\x12s\n" +
-	"\x05Watch\x12\x1b.rpc.sample.v1.WatchRequest\x1a\x1c.rpc.sample.v1.WatchResponse\"-\x82\xd3\xe4\x93\x02':\x01*\"\"/rpc.sample.v1.HealthService/Watch0\x01BHZFgithub.com/mi11km/monorepo-template/go/apps/sample/infrastructure/rpc/v1b\x06proto3"
+	"\x05Watch\x12\x1b.rpc.sample.v1.WatchRequest\x1a\x1c.rpc.sample.v1.WatchResponse\"-\x82\xd3\xe4\x93\x02':\x01*\"\"/rpc.sample.v1.HealthService/Watch0\x01BJZHgithub.com/mi11km/monorepo-template/go/apps/sample/infrastructure/rpc/v1b\x06proto3"
 
 var (
 	file_rpc_sample_v1_health_proto_rawDescOnce sync.Once

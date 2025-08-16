@@ -19,6 +19,10 @@ initialize-once:
 build:
 	bunx nx affected -t build
 
+.PHONY: generate
+generate:
+	bunx nx affected -t generate
+
 .PHONY: fmt
 fmt:
 	bunx nx affected -t fmt
