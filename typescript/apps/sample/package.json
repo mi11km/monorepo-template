@@ -1,31 +1,31 @@
 {
-	"name": "@typescript-apps/sample",
-	"version": "0.0.1",
-	"description": "A sample app using React Router",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"build": "react-router build",
-		"dev": "react-router dev",
-		"start": "react-router-serve ./build/server/index.js",
-		"typecheck": "react-router typegen && tsc --noEmit"
-	},
-	"dependencies": {
-		"@react-router/node": "7.8.0",
-		"@react-router/serve": "7.8.0",
-		"isbot": "5.1.29",
-		"react": "catalog:",
-		"react-dom": "catalog:",
-		"react-router": "7.8.0"
-	},
-	"devDependencies": {
-		"@types/bun": "catalog:",
-		"@react-router/dev": "7.8.0",
-		"@tailwindcss/vite": "4.1.12",
-		"@types/react": "catalog:",
-		"@types/react-dom": "catalog:",
-		"tailwindcss": "4.1.12",
-		"vite": "7.1.2",
-		"vite-tsconfig-paths": "5.1.4"
-	}
+  "name": "@typescript-apps/sample",
+  "version": "0.0.1",
+  "description": "A sample app using React Router",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-router/node": "7.8.0",
+    "@react-router/serve": "7.8.0",
+    "isbot": "5.1.29",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-router": "7.8.0"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "@react-router/dev": "7.8.0",
+    "@tailwindcss/vite": "4.1.12",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "tailwindcss": "4.1.12",
+    "vite": "7.1.2",
+    "vite-tsconfig-paths": "5.1.4"
+  }
 }

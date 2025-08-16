@@ -1,36 +1,36 @@
 {
-	"name": "monorepo-template",
-	"version": "0.0.1",
-	"description": "A monorepo template for TypeScript and Golang projects",
-	"private": true,
-	"workspaces": {
-		"packages": [
-			"typescript/apps/*",
-			"typescript/libs/*",
-			"typescript/tools/*"
-		],
-		"catalog": {
-			"@types/react": "19.1.10",
-			"@types/react-dom": "19.1.7",
-			"@types/bun": "1.2.20",
-			"react": "19.1.1",
-			"react-dom": "19.1.1"
-		}
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.2.0",
-		"@commitlint/cli": "19.8.1",
-		"@commitlint/config-conventional": "19.8.1",
-		"lefthook": "1.12.2",
-		"nx": "21.3.11",
-		"prettier": "3.6.2",
-		"typescript": "5.9.2"
-	},
-	"scripts": {
-		"prepare": "lefthook install"
-	},
-	"engines": {
-		"bun": ">=1.2.20"
-	},
-	"nx": {}
+  "name": "monorepo-template",
+  "version": "0.0.1",
+  "description": "A monorepo template for TypeScript and Golang projects",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "typescript/apps/*",
+      "typescript/libs/*",
+      "typescript/tools/*"
+    ],
+    "catalog": {
+      "@types/react": "19.1.10",
+      "@types/react-dom": "19.1.7",
+      "@types/bun": "1.2.20",
+      "react": "19.1.1",
+      "react-dom": "19.1.1"
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "lefthook": "1.12.2",
+    "nx": "21.3.11",
+    "prettier": "3.6.2",
+    "typescript": "5.9.2"
+  },
+  "scripts": {
+    "prepare": "lefthook install"
+  },
+  "engines": {
+    "bun": ">=1.2.20"
+  },
+  "nx": {}
 }
