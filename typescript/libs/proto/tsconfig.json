@@ -1,0 +1,3 @@
+{
+  "extends": ["@typescript-libs/tsconfig/library.json"]
+}

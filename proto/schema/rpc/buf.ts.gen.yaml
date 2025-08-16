@@ -1,0 +1,14 @@
+version: v2
+plugins:
+  - remote: buf.build/bufbuild/es:v2.6.3
+    out: ../typescript/libs/proto
+    opt:
+      - target=ts
+  - remote: buf.build/connectrpc/query-es:v2.1.1
+    out: ../typescript/libs/proto
+    opt:
+      - target=ts
+inputs:
+  - directory: schema
+  - module: buf.build/googleapis/googleapis
+  - module: buf.build/bufbuild/protovalidate

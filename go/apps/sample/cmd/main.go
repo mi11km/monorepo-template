@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"connectrpc.com/connect"
-	"github.com/mi11km/monorepo-template/go/apps/sample/infrastructure/rpc/v1"
+	v1 "github.com/mi11km/monorepo-template/go/apps/sample/infrastructure/rpc/v1"
 	"github.com/mi11km/monorepo-template/go/apps/sample/infrastructure/rpc/v1/v1connect"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
